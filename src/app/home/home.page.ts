@@ -37,7 +37,7 @@ export class HomePage {
          this.ruta = await doc(this.db,'pokemons',this.pokemonName);
 	      await setDoc(this.ruta, { type: this.pokemonType});
         this.loadingCtrl.dismiss();
-        this.enviar(this.pokemonName);
+        this.enviar(this.pokemonType);
       }));
     } catch (error) {
       console.log(error);
